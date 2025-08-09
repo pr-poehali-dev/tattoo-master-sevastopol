@@ -74,13 +74,13 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-secondary/5">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-lavender/20">
       {/* Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+      <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-purple-100 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full"></div>
+              <div className="w-8 h-8 bg-gradient-to-br from-softPurple to-pinkGlow rounded-full"></div>
               <h1 className="font-oswald text-2xl font-bold text-navy">Маргарита</h1>
             </div>
             <nav className="hidden md:flex space-x-8">
@@ -104,7 +104,7 @@ const Index = () => {
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="font-oswald text-5xl md:text-7xl font-bold text-navy mb-6 leading-tight">
               Тату-мастер
-              <span className="block bg-gradient-to-r from-primary via-accent to-turquoise bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-softPurple via-pinkGlow to-deepPurple bg-clip-text text-transparent">
                 Маргарита
               </span>
             </h1>
@@ -112,11 +112,11 @@ const Index = () => {
               Создаю уникальные татуировки в Севастополе. Профессиональный подход, стерильность и внимание к деталям.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+              <Button size="lg" className="bg-gradient-to-r from-softPurple to-pinkGlow hover:from-deepPurple hover:to-softPurple text-white px-8 py-3 shadow-lg">
                 <Icon name="MessageCircle" size={20} className="mr-2" />
                 Записаться на сеанс
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
+              <Button size="lg" variant="outline" className="border-2 border-softPurple text-softPurple hover:bg-gradient-to-r hover:from-softPurple hover:to-pinkGlow hover:text-white px-8 py-3">
                 <Icon name="Eye" size={20} className="mr-2" />
                 Посмотреть работы
               </Button>
@@ -126,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-16 bg-white">
+      <section id="portfolio" className="py-16 bg-gradient-to-b from-white to-purple-50/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-oswald text-4xl font-bold text-navy mb-4">Портфолио работ</h2>
@@ -143,7 +143,7 @@ const Index = () => {
                     className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
                   />
                   <div className="absolute top-4 right-4">
-                    <Badge className="bg-primary text-white">{item.category}</Badge>
+                    <Badge className="bg-gradient-to-r from-softPurple to-pinkGlow text-white border-0">{item.category}</Badge>
                   </div>
                 </div>
                 <CardHeader>
@@ -155,7 +155,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" className="border-2 border-primary text-primary hover:bg-primary hover:text-white">
+            <Button variant="outline" size="lg" className="border-2 border-softPurple text-softPurple hover:bg-gradient-to-r hover:from-softPurple hover:to-pinkGlow hover:text-white">
               <Icon name="Instagram" size={20} className="mr-2" />
               Больше работ в Instagram
             </Button>
@@ -164,7 +164,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
+      <section id="services" className="py-16 bg-gradient-to-b from-purple-50/30 to-lavender/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-oswald text-4xl font-bold text-navy mb-4">Услуги</h2>
@@ -176,14 +176,14 @@ const Index = () => {
               <Card 
                 key={service.name} 
                 className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                  selectedService === service.name ? 'ring-2 ring-primary bg-primary/5' : ''
+                  selectedService === service.name ? 'ring-2 ring-softPurple bg-purple-50/50' : ''
                 }`}
                 onClick={() => setSelectedService(selectedService === service.name ? null : service.name)}
               >
                 <CardHeader>
                   <CardTitle className="font-oswald text-2xl text-navy flex items-center justify-between">
                     {service.name}
-                    <span className="text-primary text-lg">{service.price}</span>
+                    <span className="text-softPurple text-lg font-semibold">{service.price}</span>
                   </CardTitle>
                   <CardDescription className="font-lato text-gray-600">
                     <div className="flex items-center mb-2">
@@ -198,14 +198,14 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Card className="max-w-lg mx-auto p-6 bg-gradient-to-r from-primary/10 to-accent/10">
+            <Card className="max-w-lg mx-auto p-6 bg-gradient-to-r from-purple-100/50 to-pink-100/30 border-purple-200/50">
               <CardHeader className="text-center">
                 <CardTitle className="font-oswald text-2xl text-navy mb-4">Онлайн запись</CardTitle>
                 <div className="space-y-4">
                   <Input placeholder="Ваше имя" />
                   <Input placeholder="Телефон" />
                   <Input placeholder="Описание татуировки" />
-                  <Button className="w-full bg-primary hover:bg-primary/90">
+                  <Button className="w-full bg-gradient-to-r from-softPurple to-pinkGlow hover:from-deepPurple hover:to-softPurple shadow-lg">
                     <Icon name="Send" size={16} className="mr-2" />
                     Отправить заявку
                   </Button>
@@ -217,7 +217,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="py-16 bg-white">
+      <section id="faq" className="py-16 bg-gradient-to-b from-lavender/10 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-oswald text-4xl font-bold text-navy mb-4">Часто задаваемые вопросы</h2>
@@ -242,7 +242,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gradient-to-r from-primary/10 via-accent/10 to-turquoise/10">
+      <section id="contact" className="py-16 bg-gradient-to-br from-purple-100/40 via-pink-100/30 to-lavender/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-oswald text-4xl font-bold text-navy mb-4">Контакты</h2>
@@ -253,8 +253,8 @@ const Index = () => {
             <div className="space-y-6">
               <Card className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon name="MapPin" size={24} className="text-primary" />
+                  <div className="w-12 h-12 bg-purple-100/60 rounded-full flex items-center justify-center">
+                    <Icon name="MapPin" size={24} className="text-softPurple" />
                   </div>
                   <div>
                     <h3 className="font-oswald text-lg font-semibold text-navy">Адрес</h3>
@@ -265,8 +265,8 @@ const Index = () => {
               
               <Card className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                    <Icon name="Phone" size={24} className="text-accent" />
+                  <div className="w-12 h-12 bg-pink-100/60 rounded-full flex items-center justify-center">
+                    <Icon name="Phone" size={24} className="text-pinkGlow" />
                   </div>
                   <div>
                     <h3 className="font-oswald text-lg font-semibold text-navy">Телефон</h3>
@@ -277,8 +277,8 @@ const Index = () => {
               
               <Card className="p-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-turquoise/10 rounded-full flex items-center justify-center">
-                    <Icon name="Instagram" size={24} className="text-turquoise" />
+                  <div className="w-12 h-12 bg-purple-100/60 rounded-full flex items-center justify-center">
+                    <Icon name="Instagram" size={24} className="text-deepPurple" />
                   </div>
                   <div>
                     <h3 className="font-oswald text-lg font-semibold text-navy">Instagram</h3>
@@ -301,7 +301,7 @@ const Index = () => {
                     className="w-full p-3 border rounded-md min-h-[100px] font-lato"
                     placeholder="Ваше сообщение"
                   ></textarea>
-                  <Button className="w-full bg-primary hover:bg-primary/90">
+                  <Button className="w-full bg-gradient-to-r from-softPurple to-pinkGlow hover:from-deepPurple hover:to-softPurple shadow-lg">
                     <Icon name="Send" size={16} className="mr-2" />
                     Отправить сообщение
                   </Button>
@@ -313,10 +313,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy py-8 text-white">
+      <footer className="bg-gradient-to-r from-navy to-deepPurple py-8 text-white">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full"></div>
+            <div className="w-8 h-8 bg-gradient-to-br from-softPurple to-pinkGlow rounded-full"></div>
             <h3 className="font-oswald text-xl font-bold">Маргарита</h3>
           </div>
           <p className="font-lato text-gray-300">© 2024 Тату-мастер Маргарита. Севастополь.</p>

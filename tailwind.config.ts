@@ -25,12 +25,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#FF6B6B',
+					DEFAULT: '#B794F6',
 					foreground: '#FFFFFF'
 				},
 				secondary: {
-					DEFAULT: '#4EQUIC4',
-					foreground: '#FFFFFF'
+					DEFAULT: '#E5D5FF',
+					foreground: '#4A5568'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -41,7 +41,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#45B7D1',
+					DEFAULT: '#F093FB',
 					foreground: '#FFFFFF'
 				},
 				popover: {
@@ -62,10 +62,35 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				coral: '#FF6B6B',
-				turquoise: '#4EQUIC4',
-				navy: '#2C3E50',
-				lightCoral: '#AECDC4'
+				purple: {
+					50: '#FAF5FF',
+					100: '#E9D5FF',
+					200: '#D8B4FE',
+					300: '#C084FC',
+					400: '#A855F7',
+					500: '#9333EA',
+					600: '#7C3AED',
+					700: '#6D28D9',
+					800: '#5B21B6',
+					900: '#4C1D95'
+				},
+				pink: {
+					50: '#FDF2F8',
+					100: '#FCE7F3',
+					200: '#FBCFE8',
+					300: '#F9A8D4',
+					400: '#F472B6',
+					500: '#EC4899',
+					600: '#DB2777',
+					700: '#BE185D',
+					800: '#9D174D',
+					900: '#831843'
+				},
+				lavender: '#E5D5FF',
+				softPurple: '#B794F6',
+				deepPurple: '#7C3AED',
+				pinkGlow: '#F093FB',
+				navy: '#2D3748'
 			},
 			fontFamily: {
 				'oswald': ['Oswald', 'sans-serif'],
