@@ -185,13 +185,13 @@ const Index = () => {
                     {service.name}
                     <span className="text-softPurple text-lg font-semibold">{service.price}</span>
                   </CardTitle>
-                  <CardDescription className="font-lato text-gray-600">
+                  <div className="font-lato text-gray-600">
                     <div className="flex items-center mb-2">
                       <Icon name="Clock" size={16} className="mr-2 text-accent" />
                       {service.duration}
                     </div>
-                    {service.description}
-                  </CardDescription>
+                    <p className="text-sm">{service.description}</p>
+                  </div>
                 </CardHeader>
               </Card>
             ))}
